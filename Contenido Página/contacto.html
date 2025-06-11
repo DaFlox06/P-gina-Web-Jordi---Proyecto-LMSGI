@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - Voltix & Company</title>
+  <link rel="stylesheet" href="./ProyectoFinal.css">
+
+</head>
+<body>
+
+<div class="hamburger" onclick="toggleMenu()">☰</div>
+<div class="hamburger" id="openBtn" onclick="toggleMenu(true)">☰</div>
+<div class="close-btn" id="closeBtn" onclick="toggleMenu(false)">✖</div>
+<div class="overlay" id="overlay" onclick="toggleMenu(false)"></div>
+
+<div class="sidebar" id="sidebar">
+    <br>
+    <br>
+    <a>Otras páginas interesantes:</a>
+    <a href="./electrodomesticos.html">Electrodomesticos</a>
+    <a href="./ordenadores.html">Ordenadores</a>
+    <a href="./componentes.html">Componentes</a>
+    
+</div>
+
+  <div class="container">
+    <h1>De parte del equipo de Voltix & Company lamentamos cualquier incidencia causada.</h1>
+    <h1>¡Contáctanos!</h1>
+    <form action="#" method="post">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required placeholder="Nombre Apellido1 Apellido2" >
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" required placeholder="TuCorreo@gmail.com" >
+
+      <label for="asunto">Asunto:</label>
+      <input type="text" id="asunto" name="asunto" placeholder="¡Muy buen trabajo!" >
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" required placeholder="Escribe aquí tu mensaje..." ></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+    <br>
+    <div class="footer">
+      &copy; 2025 Voltix & Company. Todos los derechos reservados.
+    </div>
+  </div>
+
+</body>
+
+ <script>
+  function toggleMenu(show) {
+    const sidebar = document.getElementById('sidebar');
+    const openBtn = document.getElementById('openBtn');
+    const closeBtn = document.getElementById('closeBtn');
+    const overlay = document.getElementById('overlay');
+
+    if (show) {
+      sidebar.classList.add('active');
+      overlay.classList.add('active');
+      openBtn.style.display = 'none';
+      closeBtn.style.display = 'block';
+    } else {
+      sidebar.classList.remove('active');
+      overlay.classList.remove('active');
+      openBtn.style.display = 'block';
+      closeBtn.style.display = 'none';
+    }
+  }
+</script>
+</html>
